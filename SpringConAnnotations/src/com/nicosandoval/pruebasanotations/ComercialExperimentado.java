@@ -17,6 +17,11 @@ public class ComercialExperimentado implements Empleados {
 		this.informeFinanciero = informeFinanciero;
 	}*/
 
+	/*@Autowired
+	public void quemasDaElNombre(CreacionInformeFinanciero informeFinanciero) {
+		this.informeFinanciero = informeFinanciero;
+	}*/
+
 	@Override
 	public String getTareas() {
 		// TODO Auto-generated method stub

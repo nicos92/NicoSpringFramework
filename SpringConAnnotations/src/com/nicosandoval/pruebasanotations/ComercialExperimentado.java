@@ -1,26 +1,16 @@
 package com.nicosandoval.pruebasanotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ComercialExperimentado implements Empleados {
 	
 	@Autowired
+	@Qualifier("informeFinancieroTrim4")   // id de bean que va a utilizar
 	private CreacionInformeFinanciero informeFinanciero;
 	
-	
-
-	
-	/*public ComercialExperimentado(CreacionInformeFinanciero informeFinanciero) {
-		
-		this.informeFinanciero = informeFinanciero;
-	}*/
-
-	/*@Autowired
-	public void quemasDaElNombre(CreacionInformeFinanciero informeFinanciero) {
-		this.informeFinanciero = informeFinanciero;
-	}*/
 
 	@Override
 	public String getTareas() {

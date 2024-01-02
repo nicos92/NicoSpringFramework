@@ -1,0 +1,9 @@
+package com.nico.IoC;
+
+public interface Empleados {
+	
+	public String getTareas();
+	
+	public String getInforme();
+
+}

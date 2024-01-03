@@ -20,6 +20,7 @@ public class UsoAnnotations {
 		System.out.println("Informe: " + anto.getInforme());
 		System.out.println("Tareas: " + anto.getTareas());
 		
+		
 		//cerrar el contexto
 		
 		contexto.close();

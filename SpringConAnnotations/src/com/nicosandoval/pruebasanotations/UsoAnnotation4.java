@@ -2,7 +2,7 @@ package com.nicosandoval.pruebasanotations;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class UsoAnnotation3 {
+public class UsoAnnotation4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -12,10 +12,12 @@ public class UsoAnnotation3 {
 
 		// pedir un bean a un contenedor
 		
-		Empleados empleado = contexto.getBean("directorFinanciero", Empleados.class);
+		DirectorFinanciero empleado = contexto.getBean("directorFinanciero", DirectorFinanciero.class);
 		
 		System.out.println(empleado.getTareas());
 		System.out.println(empleado.getInforme());
+		System.out.println("Email: " + empleado.getEmail() + "\nNombre de Empresa: " + empleado.getNombreEmpresa());
+		
 		
 
 		// cerrar el contexto

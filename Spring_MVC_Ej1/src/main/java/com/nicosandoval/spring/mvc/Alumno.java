@@ -25,13 +25,14 @@ public class Alumno {
 	@Email(message="Email invalido")
 	private String email;
 
-	private String materia;
-	private String ciudadEstudios;
-	private String idiomaEstudio;
-	
 	@Pattern(regexp="[0-9]{5}", message="codigo postal invalido, solo 5 numeros")
 	@CodPostalBsAs
 	private String codPostal;
+	
+	
+	private String materia;
+	private String ciudadEstudios;
+	private String idiomaEstudio;
 	
 	public String getCodPostal() {
 		return codPostal;

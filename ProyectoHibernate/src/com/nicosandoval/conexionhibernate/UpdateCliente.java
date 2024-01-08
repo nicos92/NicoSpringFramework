@@ -25,10 +25,14 @@ public class UpdateCliente {
 			// ejecutar transaccion
 			miSession.beginTransaction();
 			
+			
+			// acatualiza el cliente segun su ID mediante el metodo SET
 			//Cliente cliente = miSession.get(Cliente.class, clienteId);
 			
 			//cliente.setApellido("Sandoval");
 			
+			
+			// actualiza todos los clientes con el apellido buscado
 			miSession.createQuery("update Cliente set apellido='Pastor' where apellido LIKE '%Pastoren%'").executeUpdate();
 			
 			

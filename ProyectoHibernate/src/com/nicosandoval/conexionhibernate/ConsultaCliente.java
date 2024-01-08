@@ -24,7 +24,7 @@ public class ConsultaCliente {
 			// ejecutar transaccion
 			miSession.beginTransaction();
 			
-			// consulta a cliente
+			// consulta a todos los clientes
 			
 			List<Cliente> clientes = miSession.createQuery("from Cliente", Cliente.class).getResultList();
 			
@@ -33,12 +33,12 @@ public class ConsultaCliente {
 			
 			mostrarListaCliente(clientes);
 			
-			// consulta con busque da apellido
+			// consulta a todoslos clientes con busqueda por apellido
 			
 			clientes = miSession.createQuery("from Cliente cl where cl.apellido = 'pastorenzi' ", Cliente.class).getResultList();
 			mostrarListaCliente(clientes);
 			
-			// muestra los que viven en cierta direccion
+			// muestra todos los que viven en cierta direccion
 			
 			clientes = miSession.createQuery("from Cliente cl where cl.direccion = 'excelsior' ", Cliente.class).getResultList();
 			mostrarListaCliente(clientes);

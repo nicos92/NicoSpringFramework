@@ -21,7 +21,7 @@ public class GuardarCliente {
 		try {
 
 			// crear objeto para la BD
-			Cliente cliente = new Cliente("Caro", "Flores", "uruguay 872");
+			Cliente cliente = new Cliente("Diana", "Rodriguez", "España 44");
 
 			// ejecutar transaccion
 			miSession.beginTransaction();
@@ -35,8 +35,8 @@ public class GuardarCliente {
 			// lectura de registro
 
 			miSession.beginTransaction();
-			System.out.println("lectura del registro con id: " + cliente.getIdCliente());
-			Cliente clienteInsertado = miSession.get(Cliente.class, cliente.getIdCliente());
+			System.out.println("lectura del registro con id: " + cliente.getId());
+			Cliente clienteInsertado = miSession.get(Cliente.class, cliente.getId());
 			System.out.println("registro: " + clienteInsertado);
 			miSession.getTransaction().commit();
 			System.out.println("terminado");

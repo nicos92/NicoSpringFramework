@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="clientes")
+@Table(name="cliente")
 public class Cliente {
 	
 	public Cliente(String nombre, String apellido, String direccion) {
@@ -23,16 +23,16 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion="
+		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion="
 				+ direccion + "]";
 	}
 
-	public int getIdCliente() {
-		return idCliente;
+	public int getId() {
+		return id;
 	}
 
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNombre() {
@@ -63,8 +63,8 @@ public class Cliente {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="idCliente")
-	private int idCliente;
+	@Column(name="id")
+	private int id;
 	
 	@Column(name="nombre")
 	private String nombre;

@@ -21,11 +21,6 @@ public class DeleteCliente {
 		Session miSession = miSessionFactory.openSession();
 
 		try {
-
-
-
-			
-
 			
 			// ejecutar transaccion
 			miSession.beginTransaction();

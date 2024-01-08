@@ -24,10 +24,12 @@ public class Cliente {
 	
 	
 
+
+
+
 	@Override
 	public String toString() {
-		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion="
-				+ direccion + "]";
+		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + "]";
 	}
 
 	public int getId() {

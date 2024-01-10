@@ -41,7 +41,9 @@ public class DeleteCliente {
 			miSession.close();
 
 			//
-		} finally {
+		} catch(Exception e){
+			System.out.println(e.getMessage());
+		}finally {
 			// TODO: handle finally clause
 			miSessionFactory.close();
 		}

@@ -9,8 +9,12 @@ public class ObtenerCliente {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		SessionFactory miSessionFactory = new Configuration().configure("hibernate.cfg.xml")
-				.addAnnotatedClass(Cliente.class).addAnnotatedClass(DetallesCliente.class).buildSessionFactory();
+		SessionFactory miSessionFactory = new Configuration()
+				.configure("hibernate.cfg.xml")
+				.addAnnotatedClass(Cliente.class)
+				.addAnnotatedClass(DetallesCliente.class)
+				.addAnnotatedClass(Pedido.class)
+				.buildSessionFactory();
 
 		// crear la clase session
 
@@ -23,11 +27,15 @@ public class ObtenerCliente {
 
 			// obtener detalles cliente
 
-			DetallesCliente detallesCliente = miSession.get(DetallesCliente.class, 2);
+			//DetallesCliente detallesCliente = miSession.get(DetallesCliente.class, 2);
+			
+			Cliente cliente = miSession.get(Cliente.class, 5);
+			
 
-			if (detallesCliente != null) {
-				System.out.println(detallesCliente);
-				System.out.println(detallesCliente.getCliente());
+			if (cliente != null) {
+				System.out.println(cliente);
+				
+				System.out.println(cliente.getPedidos());
 
 				miSession.getTransaction().commit();
 				

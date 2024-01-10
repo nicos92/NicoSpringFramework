@@ -14,6 +14,7 @@ public class InsertarCliente {
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Cliente.class)
 				.addAnnotatedClass(DetallesCliente.class)
+				.addAnnotatedClass(Pedido.class)
 				.buildSessionFactory();
 
 		// crear la clase seccion

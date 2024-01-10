@@ -1,5 +1,8 @@
 package com.nicosandoval.conexionhibernate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -74,6 +78,23 @@ public class Cliente {
 		this.detallesCliente = detallesCliente;
 	}
 
+	public void insertPedido(Pedido pedido) {
+		if(pedidos==null) {
+			pedidos= new ArrayList<>();
+		}else {
+			pedidos.add(pedido);
+			pedido.setCliente(this);
+		}
+	}
+	
+	
+
+
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+
 
 
 	@Id
@@ -94,5 +115,8 @@ public class Cliente {
 	@OneToOne(cascade= CascadeType.ALL)
 	@JoinColumn(name="id")
 	private DetallesCliente detallesCliente;
+	
+	@OneToMany(mappedBy="pedidoCliente", cascade= {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST,CascadeType.REFRESH})
+	private List<Pedido> pedidos;
 
 }

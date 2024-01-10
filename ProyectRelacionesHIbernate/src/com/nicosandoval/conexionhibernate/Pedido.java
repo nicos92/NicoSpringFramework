@@ -69,7 +69,7 @@ public class Pedido {
 
 	@Override
 	public String toString() {
-		return "Pedido [id=" + id + ", fecha=" + fecha.toZonedDateTime().format(DateTimeFormatter.ofPattern("d MMM uuuu")) + ", formaPago=" + formaPago + "]";
+		return "Pedido [id=" + id + ", fecha=" + fecha.toZonedDateTime().format(DateTimeFormatter.ofPattern("uuuu MMM d")) + ", formaPago=" + formaPago + "]";
 	}
 	
 	

@@ -35,10 +35,14 @@ public class InsertarPedido {
 			}else {
 				// crear pedido del cliente
 				
-				Pedido pedido1 = new Pedido(new GregorianCalendar(2024,5,1));
-				Pedido pedido2 = new Pedido(new GregorianCalendar(2024,6,2));
-				Pedido pedido3 = new Pedido(new GregorianCalendar(2024,7,3));
-				Pedido pedido4 = new Pedido(new GregorianCalendar(2024,8,4));
+				Pedido pedido1 = new Pedido(new GregorianCalendar(2024,5,10));
+				Pedido pedido2 = new Pedido(new GregorianCalendar(2024,6,20));
+				Pedido pedido3 = new Pedido(new GregorianCalendar(2024,7,10));
+				Pedido pedido4 = new Pedido(new GregorianCalendar(2024,8,10));
+				Pedido pedido5 = new Pedido(new GregorianCalendar(2024,5,10));
+				Pedido pedido6 = new Pedido(new GregorianCalendar(2024,6,20));
+				Pedido pedido7 = new Pedido(new GregorianCalendar(2024,7,10));
+				Pedido pedido8 = new Pedido(new GregorianCalendar(2024,8,10));
 				
 				// agregar pedidos al cliente
 				
@@ -46,13 +50,21 @@ public class InsertarPedido {
 				cliente.insertPedido(pedido2);
 				cliente.insertPedido(pedido3);
 				cliente.insertPedido(pedido4);
-				
+
+				cliente.insertPedido(pedido5);
+				cliente.insertPedido(pedido6);
+				cliente.insertPedido(pedido7);
+				cliente.insertPedido(pedido8);
 				// guardar los pedidos en la base de dato s de la tabla pedido
 				
 				miSession.save(pedido1);
 				miSession.save(pedido2);
 				miSession.save(pedido3);
 				miSession.save(pedido4);
+				miSession.save(pedido5);
+				miSession.save(pedido6);
+				miSession.save(pedido7);
+				miSession.save(pedido8);
 				
 				miSession.getTransaction().commit();
 				System.out.println("registro insertado");

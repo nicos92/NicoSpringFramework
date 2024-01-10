@@ -22,11 +22,17 @@ public class InsertarCliente {
 		Session miSession = miSessionFactory.openSession();
 
 		try {
+			
+			String name = "Nico";
 
 			// crear objeto para la BD
-			Cliente cliente = new Cliente("Anto", "Pastorenzi", "uruguay 872");
+			String apellido = "Sandoval";
+			String direccion = "uruguay 872";
+			String tel = "012345689";
+			Cliente cliente = new Cliente(name, apellido , direccion);
 			
-			DetallesCliente detalesCliente = new DetallesCliente("Anto@Pastorenzi", "02224464770", "monotributista");
+			String coment = "monotributista";
+			DetallesCliente detalesCliente = new DetallesCliente(name + "@" + apellido, tel, coment );
 
 			
 			// asociar los objetos

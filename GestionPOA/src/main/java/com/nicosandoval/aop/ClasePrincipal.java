@@ -16,12 +16,14 @@ public class ClasePrincipal {
 		
 		// obtener el bean del contenedor de spring
 		
-		ClienteDAO cliente = contexto.getBean("clienteDAO", ClienteDAO.class);
+		Cliente cliente = new Cliente();
+		
+		ClienteDAO clienteDao = contexto.getBean("clienteDAO", ClienteDAO.class);
 		ClienteVipDAO clienteVip = contexto.getBean("clienteVipDAO", ClienteVipDAO.class);
 		
 		//llamar al metodo
 		
-		cliente.insertaCliente(); // este es el nombre del  metodo que debe coioncidir con la anotacion @Before
+		clienteDao.insertaCliente(cliente, "nomal"); // este es el nombre del  metodo que debe coioncidir con la anotacion @Before
 		clienteVip.insertaClienteVip(); // este es el nombre del  metodo que debe coioncidir con la anotacion @Before
 		
 		//cerrar el contexto

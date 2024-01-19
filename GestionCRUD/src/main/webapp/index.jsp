@@ -4,12 +4,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!doctype html>
-<html lang="en" class="h-100" data-bs-theme="auto">
+<html lang="es" class="h-100" data-bs-theme="auto">
 <head>
 <script
 	src="${pageContext.request.contextPath}/recursos/estilos/bootstrap/js/color-modes.js"></script>
 
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 
 <title>Welcome</title>
 
@@ -293,12 +293,10 @@
 					<div class="container ">
 						<div
 							class="carousel-caption text-start bg-black p-2 text-white bg-opacity-50 rounded d-inline-block">
-							<h1>Example headline.</h1>
-							<p class="opacity-75">Some representative placeholder content
-								for the first slide of the carousel.</p>
+							<h1>Ciudad de Longchamps</h1>
+							<p class="opacity-75">Una de las ciudades mas representativas de zona sur.</p>
 							<p>
-								<a class="btn btn-lg btn-outline-light" href="#">Sign up
-									today</a>
+								<a class="btn btn-lg btn-outline-light" href="#">Ver mas</a>
 							</p>
 						</div>
 					</div>
@@ -314,11 +312,10 @@
 					<div class="container">
 						<div
 							class="carousel-caption bg-black p-2 text-white bg-opacity-50 rounded d-inline-block">
-							<h1>Another example headline.</h1>
-							<p>Some representative placeholder content for the second
-								slide of the carousel.</p>
+							<h1>Su infraestructura.</h1>
+							<p>El crecimiento economico de Argentina la catapulto</p>
 							<p>
-								<a class="btn btn-lg btn-outline-light" href="#">Learn more</a>
+								<a class="btn btn-lg btn-outline-light" href="#">Ver mas</a>
 							</p>
 						</div>
 					</div>
@@ -335,12 +332,10 @@
 					<div class="container">
 						<div
 							class="carousel-caption text-end bg-black p-2 text-white bg-opacity-50 rounded d-inline-block">
-							<h1>One more for good measure.</h1>
-							<p>Some representative placeholder content for the third
-								slide of this carousel.</p>
+							<h1>Cultura</h1>
+							<p>Con el paso del tiempo los habitantes desarrollaron tradiciones en el medio ambiente.</p>
 							<p>
-								<a class="btn btn-lg btn-outline-light" href="#">Browse
-									gallery</a>
+								<a class="btn btn-lg btn-outline-light" href="#">Galeria</a>
 							</p>
 						</div>
 					</div>
@@ -427,7 +422,7 @@
 					<img
 						class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded "
 						width="500" height="500"
-						src="${pageContext.request.contextPath}/recursos/imgs/1.jpg"
+						src="${pageContext.request.contextPath}/recursos/imgs/hamilton.jpg"
 						role="img" aria-label="Placeholder: 500x500">
 
 
@@ -450,7 +445,7 @@
 					<img
 						class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded "
 						width="500" height="500"
-						src="${pageContext.request.contextPath}/recursos/imgs/2.jpg"
+						src="${pageContext.request.contextPath}/recursos/imgs/riccardo.jpg"
 						role="img" aria-label="Placeholder: 500x500">
 				</div>
 			</div>
@@ -471,7 +466,7 @@
 					<img
 						class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded "
 						width="500" height="500"
-						src="${pageContext.request.contextPath}/recursos/imgs/3.jpg"
+						src="${pageContext.request.contextPath}/recursos/imgs/trang-pham.jpg"
 						role="img" aria-label="Placeholder: 500x500">
 				</div>
 			</div>

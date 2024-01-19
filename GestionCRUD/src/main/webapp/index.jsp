@@ -25,8 +25,7 @@
 
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/estilos/bootstrap/css/bootstrap.css">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/recursos/estilos/welcome.css">
+
 
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -113,11 +112,26 @@
 	display: block !important;
 }
 </style>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/recursos/estilos/welcome.css">
 
 
 
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column">
+
+	<!-- <div class="container my-5">
+
+			<div class="container-fluid ">
+
+				<h3 class="loading-text align-middle">
+					<span>N</span><span>I</span><span>C</span><span>O</span><span>S</span>
+				</h3>
+			</div>
+
+
+
+		</div> -->
 
 	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
@@ -193,7 +207,11 @@
 		<nav class="navbar navbar-expand-lg  bg-body-tertiary fixed-top"
 			aria-label="Offcanvas navbar large">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">NICOS navbar</a>
+				<a id="nameNav" class="navbar-brand " href="../GestionCRUD"> <img
+					width="30" class="d-inline-block align-text-top"
+					src="${pageContext.request.contextPath}/recursos/imgs/milogosinnombre2.png"
+					aria-hidden="true"> NicoS
+				</a>
 				<button class="navbar-toggler" type="button"
 					data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
 					aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
@@ -241,106 +259,244 @@
 
 
 	<!-- Begin page content -->
-	<main class="flex-shrink-0 my-5 py-3 bg-body ">
+	<main class="flex-shrink-0 my-1 py-1 bg-body ">
 
 
 		<!-- CARRUSEL -->
 
-			<!-- Content here -->
+		<div id="myCarousel" class="carousel slide mb-6"
+			data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#myCarousel"
+					data-bs-slide-to="0" class="active" aria-current="true"
+					aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#myCarousel"
+					data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#myCarousel"
+					data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
 
-			<div id="myCarousel" class="carousel slide bg-body mh-100"
-				data-bs-ride="carousel">
 
-				<div class="carousel-indicators">
-					<button type="button" data-bs-target="#myCarousel"
-						data-bs-slide-to="0" class="active" aria-current="true"
-						aria-label="Slide 1"></button>
-					<button type="button" data-bs-target="#myCarousel"
-						data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button type="button" data-bs-target="#myCarousel"
-						data-bs-slide-to="2" aria-label="Slide 3"></button>
-				</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active ">
 
-				<div class="carousel-inner mh-100" data-bs-interval="5000">
-					<div class="carousel-item active">
-
-						<img class="d-block w-100 img-fluid " alt=""
-							src="${pageContext.request.contextPath}/recursos/imgs/11.png">
-						<div class="container ">
-							<div class="carousel-caption text-start text-light">
-								<h3>Example headline.</h3>
-								<p class="opacity-75">content for the first slide of the
-									carousel.</p>
-								
-							</div>
-						</div>
-					</div>
-
-					<div class="carousel-item mh-100"  data-bs-interval="5000">
-
-						<img class="d-block w-100 img-fluid " alt=""
-							src="${pageContext.request.contextPath}/recursos/imgs/22.png">
-						<div class="container ">
-							<div class="carousel-caption text-light">
-								<h3>Another example headline.</h3>
-								<p>Some representative placeholder</p>
-								
-							</div>
-						</div>
-					</div>
-
-					<div class="carousel-item mh-100" data-bs-interval="5000">
+					<img class="bd-placeholder-img object-fit-cover" width="100%"
+						height="100%"
+						src="${pageContext.request.contextPath}/recursos/imgs/piccinng.jpg"
+						aria-hidden="true">
 
 
 
-						<img class="d-block w-100 " alt=""
-							src="${pageContext.request.contextPath}/recursos/imgs/33.png">
-						<div class="container ">
-							<div class="carousel-caption text-end text-light ">
 
-								<h3>One more for good measure.</h3>
-								<p>Some representative placeholder</p>
-								
-							</div>
+
+
+					<div class="container ">
+						<div
+							class="carousel-caption text-start bg-black p-2 text-white bg-opacity-50 rounded d-inline-block">
+							<h1>Example headline.</h1>
+							<p class="opacity-75">Some representative placeholder content
+								for the first slide of the carousel.</p>
+							<p>
+								<a class="btn btn-lg btn-outline-light" href="#">Sign up
+									today</a>
+							</p>
 						</div>
 					</div>
 				</div>
 
-				<button class="carousel-control-prev" type="button"
-					data-bs-target="#myCarousel" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button"
-					data-bs-target="#myCarousel" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
+
+				<div class="carousel-item">
+					<img class="bd-placeholder-img object-fit-cover" width="100%"
+						height="100%"
+						src="${pageContext.request.contextPath}/recursos/imgs/nextVoyage.jpg"
+						aria-hidden="true">
+
+					<div class="container">
+						<div
+							class="carousel-caption bg-black p-2 text-white bg-opacity-50 rounded d-inline-block">
+							<h1>Another example headline.</h1>
+							<p>Some representative placeholder content for the second
+								slide of the carousel.</p>
+							<p>
+								<a class="btn btn-lg btn-outline-light" href="#">Learn more</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="carousel-item">
+					<img class="bd-placeholder-img object-fit-cover" width="100%"
+						height="100%"
+						src="${pageContext.request.contextPath}/recursos/imgs/karol.jpg"
+						aria-hidden="true">
+
+
+					<div class="container">
+						<div
+							class="carousel-caption text-end bg-black p-2 text-white bg-opacity-50 rounded d-inline-block">
+							<h1>One more for good measure.</h1>
+							<p>Some representative placeholder content for the third
+								slide of this carousel.</p>
+							<p>
+								<a class="btn btn-lg btn-outline-light" href="#">Browse
+									gallery</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button"
+				data-bs-target="#myCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button"
+				data-bs-target="#myCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+
+		<!-- Marketing messaging and featurettes
+  ================================================== -->
+		<!-- Wrap the rest of the page in another container to center all the content. -->
+
+		<div class="container marketing">
+
+			<!-- Three columns of text below the carousel -->
+			<div class="row">
+				<div class="col-lg-4">
+					<img class="bd-placeholder-img rounded-circle" width="140"
+						height="140"
+						src="${pageContext.request.contextPath}/recursos/imgs/3.jpg"
+						role="img" aria-label="Placeholder">
+					<h2 class="fw-normal">Heading</h2>
+					<p>Some representative placeholder content for the three
+						columns of text below the carousel. This is the first column.</p>
+					<p>
+						<a class="btn btn-secondary" href="#">View details &raquo;</a>
+					</p>
+				</div>
+				<!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<img class="bd-placeholder-img rounded-circle" width="140"
+						height="140"
+						src="${pageContext.request.contextPath}/recursos/imgs/2.jpg"
+						role="img" aria-label="Placeholder">
+					<h2 class="fw-normal">Heading</h2>
+					<p>Another exciting bit of representative placeholder content.
+						This time, we've moved on to the second column.</p>
+					<p>
+						<a class="btn btn-secondary" href="#">View details &raquo;</a>
+					</p>
+				</div>
+				<!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<img class="bd-placeholder-img rounded-circle" width="140"
+						height="140"
+						src="${pageContext.request.contextPath}/recursos/imgs/1.jpg"
+						role="img" aria-label="Placeholder">
+					<h2 class="fw-normal">Heading</h2>
+					<p>And lastly this, the third column of representative
+						placeholder content.</p>
+					<p>
+						<a class="btn btn-secondary" href="#">View details &raquo;</a>
+					</p>
+				</div>
+				<!-- /.col-lg-4 -->
+			</div>
+			<!-- /.row -->
+
+
+			<!-- START THE FEATURETTES -->
+
+			<hr class="featurette-divider">
+
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading fw-normal lh-1">
+						First featurette heading. <span class="text-body-secondary">
+							blow your mind.</span>
+					</h2>
+					<p class="lead">Some great placeholder content for the first
+						featurette here. Imagine some exciting prose here.</p>
+				</div>
+				<div class="col-md-5">
+					<img
+						class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded "
+						width="500" height="500"
+						src="${pageContext.request.contextPath}/recursos/imgs/1.jpg"
+						role="img" aria-label="Placeholder: 500x500">
+
+
+				</div>
 			</div>
 
+			<hr class="featurette-divider">
 
-			<!-- CARRUSEL END -->
-
-
-
-
-		<!-- <div class="container my-5">
-
-			<div class="container-fluid ">
-
-				<h3 class="loading-text align-middle">
-					<span>N</span><span>I</span><span>C</span><span>O</span><span>S</span>
-				</h3>
+			<div class="row featurette">
+				<div class="col-md-7 order-md-2">
+					<h2 class="featurette-heading fw-normal lh-1">
+						Oh yeah, that good. <span class="text-body-secondary">See
+							for yourself.</span>
+					</h2>
+					<p class="lead">Another featurette? Of course. More placeholder
+						content here to give you an idea of how this layout would work
+						with some actual real-world content in place.</p>
+				</div>
+				<div class="col-md-5 order-md-1">
+					<img
+						class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded "
+						width="500" height="500"
+						src="${pageContext.request.contextPath}/recursos/imgs/2.jpg"
+						role="img" aria-label="Placeholder: 500x500">
+				</div>
 			</div>
 
+			<hr class="featurette-divider">
+
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading fw-normal lh-1">
+						And lastly, this one. <span class="text-body-secondary">Checkmate.</span>
+					</h2>
+					<p class="lead">And yes, this is the last block of
+						representative placeholder content. Again, not really intended to
+						be actually read, simply here to give you a better view of what
+						this would look like with some actual content. Your content.</p>
+				</div>
+				<div class="col-md-5">
+					<img
+						class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded "
+						width="500" height="500"
+						src="${pageContext.request.contextPath}/recursos/imgs/3.jpg"
+						role="img" aria-label="Placeholder: 500x500">
+				</div>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<!-- /END THE FEATURETTES -->
+
+		</div>
+		<!-- /.container -->
 
 
-		</div> -->
+		<!-- CARRUSEL END -->
+
+
+
+
+
+
+
 	</main>
 
 	<footer class="footer mt-auto py-3 bg-body-tertiary">
 		<div class="container">
-			<p class="text-center text-body-secondary">&copy; 2024 NICOS
+			<p class="text-center text-body-secondary">&copy; 2024 NicoS
 				Company,Inc</p>
 		</div>
 	</footer>

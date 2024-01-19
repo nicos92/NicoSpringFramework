@@ -27,13 +27,12 @@
 
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/estilos/bootstrap/css/styleDataTable.css">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/recursos/estilos/welcome.css">
+
 
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-	
-	<link rel="stylesheet" type="text/css"
+
+<link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/recursos/estilos/bootstrap/css/bootstrap.css">
 
 
@@ -120,6 +119,10 @@
 </style>
 
 
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/recursos/estilos/welcome.css">
+
+
 
 </head>
 <body class="d-flex flex-column h-100">
@@ -198,7 +201,11 @@
 		<nav class="navbar navbar-expand-lg  bg-body-tertiary fixed-top "
 			aria-label="Offcanvas navbar large">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">NICOS navbar</a>
+				<a id="nameNav" class="navbar-brand " href="../">
+				<img width="30" 
+					class="d-inline-block align-text-top" 
+					src="${pageContext.request.contextPath}/recursos/imgs/milogosinnombre2.png"
+					aria-hidden="true"> NicoS</a>
 				<button class="navbar-toggler" type="button"
 					data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
 					aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
@@ -247,67 +254,69 @@
 	<main class="flex-shrink-0 my-5 py-3">
 
 
-		<div class="container my-5">
+		<div class="container my-1">
 			<h3>
 				Tabla <small class="text-body-secondary">Clientes</small>
 			</h3>
-			<input type="button" class="btn btn-outline-info"
-				value="Agregar Cliente"
-				onclick="window.location.href='formularioAgregar'; return false;">
+			<button type="button" class="btn btn-outline-info"
+				
+				onclick="window.location.href='formularioAgregar'; return false;"><i class="bi bi-person-add"></i> Agregar Cliente</button>
 
 			<div class="card mb-4 mt-4">
+
 				<div class="card-header">
 					<i class="fas fa-table me-1"></i> Lista
 				</div>
+
 				<div class="card-body">
-					<table id="datatablesSimple">
-						<thead>
-							<tr>
-								<th>Nombre</th>
-								<th>Apellido</th>
-								<th>Email</th>
-								<th class="col-auto text-center"><i class="bi bi-tools"></i></th>
+					<div class="table-responsive">
 
-							</tr>
-						</thead>
-						<tbody>
-							<c:forEach var="clientesTemp" items="${clientes }">
-
-
-
-
-								<c:url var="linkActualizar"
-									value="/cliente/formActualizarCliente">
-
-									<c:param name="clienteID" value="${clientesTemp.id}"></c:param>
-
-								</c:url>
-
-
-								<c:url var="linkEliminar" value="/cliente/eliminarCliente">
-
-									<c:param name="clienteID" value="${clientesTemp.id }"></c:param>
-
-								</c:url>
-
+						<table id="datatablesSimple" class="table ">
+							<thead>
 								<tr>
-									<td data-label="Nombre">${clientesTemp.nombre}</td>
-									<td data-label="Apellido">${clientesTemp.apellido}</td>
-									<td class="text-wrap" data-label="Email">${clientesTemp.email}</td>
-									<td class="text-center"><a class="btn btn-outline-warning border-0"
-										href="${linkActualizar}"><i class="bi bi-pencil"></i></a>
-										 <a href="${linkEliminar }"
-										class="btn btn-outline-danger  border-0" onclick="if(!(confirm('¿Seguro quieres eliminar el Cliente?')))return false"> 
-										<i class="bi bi-trash3"></i></a>
+									<th>Nombre</th>
+									<th>Apellido</th>
+									<th>Email</th>
+									<th class="col-auto text-center"><i class="bi bi-tools"></i></th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<c:forEach var="clientesTemp" items="${clientes }">
 
 
 
 
+									<c:url var="linkActualizar"
+										value="/cliente/formActualizarCliente">
 
-									</td>
-							</c:forEach>
-						</tbody>
-					</table>
+										<c:param name="clienteID" value="${clientesTemp.id}"></c:param>
+
+									</c:url>
+
+
+									<c:url var="linkEliminar" value="/cliente/eliminarCliente">
+
+										<c:param name="clienteID" value="${clientesTemp.id }"></c:param>
+
+									</c:url>
+
+									<tr>
+										<td data-label="Nombre">${clientesTemp.nombre}</td>
+										<td data-label="Apellido">${clientesTemp.apellido}</td>
+										<td  data-label="Email">${clientesTemp.email}</td>
+										<td class="text-center"><a
+											class="btn btn-outline-warning border-0"
+											href="${linkActualizar}"><i class="bi bi-pencil"></i></a> <a
+											href="${linkEliminar }"
+											class="btn btn-outline-danger  border-0"
+											onclick="if(!(confirm('¿Seguro quieres eliminar el Cliente?')))return false">
+												<i class="bi bi-trash3"></i>
+										</a></td>
+								</c:forEach>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 
@@ -324,7 +333,7 @@
 		<div class="container">
 
 
-			<p class="text-center text-body-secondary">&copy; 2024 NICOS
+			<p class="text-center text-body-secondary">&copy; 2024 NicoS
 				Company, Inc</p>
 
 		</div>

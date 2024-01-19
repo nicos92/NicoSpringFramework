@@ -3,6 +3,14 @@ package com.nicosandoval.aop;
 
 public class Cliente {
 
+	public Cliente(String nombre, String tipo) {
+		
+		this.nombre = nombre;
+		this.tipo = tipo;
+	}
+	public Cliente() {
+		
+	}
 	private String nombre;
 	private String tipo;
 	

@@ -24,6 +24,13 @@ public class ClasePrincipal {
 		//llamar al metodo
 		
 		clienteDao.insertaCliente(cliente, "nomal"); // este es el nombre del  metodo que debe coioncidir con la anotacion @Before
+		
+		clienteDao.setCodigoClientenormal("0123456789");
+		clienteDao.setCaloracionClienteNormal("positiva");
+		String codigoClienteNormal = clienteDao.getCodigoClientenormal();
+		String valoracionClienteNormal = clienteDao.getCaloracionClienteNormal();
+		
+		System.out.println(codigoClienteNormal + " - " + valoracionClienteNormal);
 		clienteVip.insertaClienteVip(); // este es el nombre del  metodo que debe coioncidir con la anotacion @Before
 		
 		//cerrar el contexto

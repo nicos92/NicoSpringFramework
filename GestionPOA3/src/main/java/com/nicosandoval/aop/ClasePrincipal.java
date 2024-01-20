@@ -19,7 +19,7 @@ public class ClasePrincipal {
 		ClienteDAO clienteDao = contexto.getBean("clienteDAO", ClienteDAO.class);
 
 		try {
-			boolean miParam = false;
+			boolean miParam = true;
 
 			System.out.println(clienteDao.getClientes(miParam));
 		} catch (Exception e) {

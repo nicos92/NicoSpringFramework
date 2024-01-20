@@ -3,6 +3,7 @@ package com.nicosandoval.aop.aspectos;
 import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -56,6 +57,10 @@ public class LoginAspecto {
 		System.out.println("Aqui se estarian ejecutando de forma automatica las tareas tras la exepcion + "
 				+ "guardar en un log o lo que sea");
 
+	}
+	@After("execution(* com.nicosandoval.aop.dao.ClienteDAO.getClientes(..) )")
+	public void ejecutandoTareasconYsinExcepcion(JoinPoint joinpoint) {
+		System.out.println("ejecutando tareas SIEMPRE despues del metodo");
 	}
 
 	private void procesadoDatosAfterReturning(List<Cliente> listClientes) {

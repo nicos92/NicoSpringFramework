@@ -46,9 +46,19 @@ public class LoginAspecto {
 	public void luegoGetClientes(List<Cliente> listClientes) {
 		for (Cliente cliente : listClientes) {
 			if (cliente.getTipo() == "VIP") {
+				
+				procesadoDatosAfterReturning(listClientes);
 				System.out.println("hay clientes VIP en el listado");
 				System.out.println("Cliente VIP: " + cliente.getNombre());
 			}
+		}
+	}
+
+	private void procesadoDatosAfterReturning(List<Cliente> listClientes) {
+	
+		for (Cliente cliente : listClientes) {
+			String datosPRocesados = "V.I.P. " + cliente.getNombre().toUpperCase();
+			cliente.setNombre(datosPRocesados);
 		}
 	}
 	
